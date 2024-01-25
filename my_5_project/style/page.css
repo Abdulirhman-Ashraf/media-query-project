@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image:linear-gradient(#111,#222);
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background-color: rgb(205, 0, 0);
+    z-index: -1;
+    clip-path: circle(40% at right 70%);
+}
+
+.container{
+    background-color: rgba(255,255,255, 0.1);
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    color: white;
+    overflow: hidden;
+
+}
+
+nav{    
+    width: 80%;
+    margin: 20px auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+nav .logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+nav .navbar ul li{
+display: inline-block;
+padding: 10px;
+}
+
+nav .navbar ul li a{
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.778);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav .navbar ul li a:hover{color:rgba(255, 0, 0, 0.641);
+
+}
+
+.content{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.content .text{
+    width: 40%;    height: 50%;
+
+}
+
+.content .text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+margin: 10px 0;
+}
+
+.content .text p{
+color: rgba(240, 248, 255, 0.778);
+line-height: 25px;
+margin: 10px 0;
+}
+
+.content .image{
+    width: 40%;
+    height: 50%;
+}
+
+.content .image img{
+    width: 400px;
+}
+@media (max-width:1155px) and (min-width:875px){
+
+.content .image img{
+    width: 300px;
+}
+
+}
+
+@media (max-width:875px){
+
+    body::after{
+        clip-path: circle(40% at bottom);
+    }
+
+    nav{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .content {
+
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content .text{
+        width: 80%;
+
+    }
+
+    .content .image{
+        width: 80%;
+
+    }
+    .content .image img{
+        width: 300px;
+    }
+    }
